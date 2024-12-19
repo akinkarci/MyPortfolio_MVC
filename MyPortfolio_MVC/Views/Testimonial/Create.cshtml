@@ -1,0 +1,41 @@
+﻿﻿@model MyPortfolio_MVC.Models.TblTestimonial
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+<h2>Referans Oluştur</h2>
+
+<form method="post" enctype="multipart/form-data">
+    <div>
+        <label>Image Yükle</label>
+        <input type="file" name="ImageFile" class="form-control" />
+    </div>
+
+    <br />
+
+    <div>
+        <label>İsim Soyisim</label>
+        @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+    </div>
+
+    <br />
+
+    <div>
+        <label>Başlık</label>
+        @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    </div>
+
+    <br />
+
+    <div>
+        <label>Yorum</label>
+        @Html.TextBoxFor(x => x.Comment, new { @class = "form-control" })
+    </div>
+
+    <br />
+
+
+
+    <button class="btn btn-outline-primary">Kaydet</button>
+</form>

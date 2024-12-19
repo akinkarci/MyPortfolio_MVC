@@ -1,0 +1,34 @@
+﻿@model MyPortfolio_MVC.Models.TblContact
+
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+<h2>Update</h2>
+
+<form method="post">
+
+    @Html.HiddenFor(x => x.ContactId)
+
+    <div>
+        <label> Telefon </label>
+            @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+        
+
+    </div>
+
+    <div>
+        <label>Email</label>
+            @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+       
+
+    </div>
+
+    <br />
+
+
+    <button class="btn btn-outline-primary">Kaydet</button>
+
+</form>
+

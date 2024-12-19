@@ -1,0 +1,58 @@
+﻿@model List<MyPortfolio_MVC.Models.TblContact>
+
+<section id="contact" class="s-contact target-section">
+
+    <div class="row contact-top">
+        <div class="column lg-12">
+            <h2 class="text-pretitle">
+                Get In Touch
+            </h2>
+
+            <p class="h1">
+
+
+                Sorunuz olsun yada olmasın
+                sadece teknoloji hakkında konuşmak bile isteseniz
+                Buradayım. Bir Mesaj Uzağınızda. Bana Mesaj Atın.
+                
+            </p>
+        </div>
+    </div> <!-- end contact-top -->
+
+
+
+    <div class="row contact-bottom">
+        <div class="column lg-3 md-5 tab-6 stack-on-550 contact-block">
+            <h3 class="text-pretitle">Reach me at</h3>
+            <p class="contact-links">
+
+                @foreach (var item in Model)
+                {
+                    <a href="mailto: @item.Email " class="mailtoui"> @item.Email </a> <br>
+                    <a href="tel: @item.Phone "> @item.Phone </a>
+                }
+            </p>
+        </div>
+
+        @Html.Action("DefaultSocialMedia", "Default")
+
+        @*<div class="column lg-4 md-5 tab-6 stack-on-550 contact-block">
+            <h3 class="text-pretitle">Social</h3>
+            <ul class="contact-social">
+                <li><a href="#0">Behance</a></li>
+                <li><a href="#0">Dribble</a></li>
+                <li><a href="#0">Twitter</a></li>
+                <li><a href="#0">Instagram</a></li>
+                <li><a href="#0">Github</a></li>
+            </ul>
+        </div>*@
+
+        <div class="column lg-4 md-12 contact-block">
+            <a href="#contact2" class="btn btn-primary">
+                Bana Ulaşın
+            </a>
+
+        </div>
+
+    </div>
+</section>

@@ -1,0 +1,35 @@
+﻿﻿@model MyPortfolio_MVC.Models.TblAbout
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+<h2>Hakkımda Kısmı Güncelleme Alanı</h2>
+
+<form method="post" enctype="multipart/form-data" >
+    @Html.HiddenFor(x => x.AboutId)
+
+    <div>
+        <label>Başlık</label>
+        @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    </div>
+
+    <div>
+        <label>Tanımlayıcı Bilgi</label>
+        @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    </div>
+
+    <div>
+        <label>Resim Yükle</label>
+        <input type="file" name="ImageFile" class="form-control" />
+    </div>
+
+    <div>
+        <label>Cv Yükle (*.Pdf Yükleyiniz)</label>
+        <input type="file" name="CvFile" accept=".pdf" class="form-control" />
+    </div>
+
+    <br />
+
+    <button class="btn btn-outline-primary">Kaydet</button>
+</form>
